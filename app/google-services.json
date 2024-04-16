@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258156413796",
+    "project_id": "r3d-11c93",
+    "storage_bucket": "r3d-11c93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258156413796:android:1fd2cc439f4efac936b071",
+        "android_client_info": {
+          "package_name": "com.test.r3d"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKwfx55q495O0W5s2R_gY0kOOfOrQ9yCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
