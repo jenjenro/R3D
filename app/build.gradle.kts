@@ -65,6 +65,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation ("com.mikhaellopez:circularimageview:4.3.1")
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
