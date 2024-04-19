@@ -97,7 +97,8 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="564dp" />
+        tools:layout_editor_absoluteY="564dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button18"
@@ -113,7 +114,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.344"
         app:layout_constraintStart_toEndOf="@+id/button17"
-        tools:layout_editor_absoluteY="564dp" />
+        tools:layout_editor_absoluteY="564dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView13"

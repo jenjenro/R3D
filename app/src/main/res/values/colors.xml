@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#AAAFF3</color>
     <color name="formColor">#445fd2</color>
+    <color name="yellow">#F7BA41</color>
+    <color name="red">"#B93C3A"</color>
+
 </resources>
