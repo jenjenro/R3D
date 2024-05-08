@@ -1,6 +1,8 @@
 package com.test.r3d
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,7 +17,13 @@ import com.test.r3d.ui.theme.R3DTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.register)
+        setContentView(R.layout.home)
+
+        val btnNextScreen = findViewById<Button>(R.id.btnNextScreen)
+        btnNextScreen.setOnClickListener {
+            // Aquí defines la clase de la próxima actividad
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
-
