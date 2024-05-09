@@ -19,9 +19,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
 
-        val btnNextScreen = findViewById<Button>(R.id.btnNextScreen)
-        btnNextScreen.setOnClickListener {
-            // Aquí defines la clase de la próxima actividad
+        val btnPrueba = findViewById<Button>(R.id.btnNextScreen)
+        btnPrueba.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
