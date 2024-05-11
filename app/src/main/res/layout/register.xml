@@ -194,7 +194,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnActividad1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/botton_background_light_blue"
@@ -213,7 +213,7 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button6"
+                app:layout_constraintTop_toBottomOf="@+id/btnActividad1"
                 tools:layout_editor_absoluteX="0dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

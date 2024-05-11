@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ControlActivity"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imageView11"
@@ -83,15 +85,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button18"
         android:layout_width="180dp"
         android:layout_height="32dp"
         android:layout_marginStart="-32dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="132dp"
         android:background="@drawable/botton_background_light_blue"
+        android:gravity="center"
         android:text="Dispositivo"
-        android:drawableLeft="@drawable/ic_form_age"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -108,12 +110,14 @@
         android:layout_marginEnd="-32dp"
         android:layout_marginBottom="132dp"
         android:background="@drawable/botton_background_light_blue"
+        android:gravity="center"
         android:text="Encender"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
