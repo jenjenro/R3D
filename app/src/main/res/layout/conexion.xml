@@ -87,7 +87,7 @@
         android:fontFamily="@font/gotham"
         android:text="Conexión Bluetooth"
         android:textColor="@color/white"
-        android:textSize="14dp"
+        android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
@@ -101,7 +101,7 @@
         android:fontFamily="@font/gotham"
         android:text="Empecemos a jugar"
         android:textColor="@color/white"
-        android:textSize="14dp"
+        android:textSize="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
