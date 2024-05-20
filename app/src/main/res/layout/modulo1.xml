@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Modulo1">
 
 
     <ImageView
@@ -72,7 +74,7 @@
         app:srcCompat="@drawable/extra1" />
 
     <Button
-        android:id="@+id/nivel1"
+        android:id="@+id/btnNivel1"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
@@ -98,12 +100,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nivel1"
+        app:layout_constraintTop_toBottomOf="@+id/btnNivel1"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/extra2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnNivel2"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
