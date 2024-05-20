@@ -3,6 +3,7 @@ package com.test.r3d
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ConexionActivity : AppCompatActivity() {
@@ -20,5 +21,10 @@ class ConexionActivity : AppCompatActivity() {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
+        val bundle = intent.extras
+        val user = bundle?.getSerializable("user") as Usuario
+
+
+
     }
 }
