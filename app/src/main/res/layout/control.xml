@@ -103,7 +103,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button10"
         android:layout_width="180dp"
         android:layout_height="32dp"
         android:layout_marginStart="164dp"

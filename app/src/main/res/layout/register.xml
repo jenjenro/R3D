@@ -197,7 +197,7 @@
                 android:id="@+id/btnActividad1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/botton_background_light_blue"
+                android:background="@color/formColor"
                 android:fontFamily="@font/gotham"
                 android:text="Ingresar"
                 android:textColor="@color/white"

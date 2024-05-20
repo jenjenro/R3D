@@ -9,6 +9,9 @@ import androidx.core.view.WindowInsetsCompat
 class ControlActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.control)
+
+
     }
 }

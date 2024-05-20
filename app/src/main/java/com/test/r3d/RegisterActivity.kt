@@ -20,7 +20,8 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    fun ingresarDatos(){
+    fun
+            ingresarDatos(){
         val db = Firebase.firestore
         val name: EditText? = findViewById<EditText>(R.id.inputName)
         val pass: EditText? = findViewById<EditText>(R.id.inputPass)
