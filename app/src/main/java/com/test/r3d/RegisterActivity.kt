@@ -35,6 +35,7 @@ class RegisterActivity : AppCompatActivity() {
                 "age" to age?.text.toString(),
                 "password" to pass?.text.toString()
             )
+            val usuario = Usuario(name?.text.toString(),age?.text.toString().toInt(),pass?.text.toString())
             db.collection("users")
                 .add(user)
                 .addOnSuccessListener { documentReference ->
@@ -43,11 +44,15 @@ class RegisterActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     println("Error adding document $e")
                 }
-            nextScreen()
+            nextScreen(usuario)
         }
     }
-    fun nextScreen(){
+    fun nextScreen(user: Usuario){
         val intent = Intent(this, ConexionActivity::class.java)
+
+        val bundle = Bundle()
+        bundle.putSerializable("user", user)
+        intent.putExtras(bundle)
         startActivity(intent)
     }
 }

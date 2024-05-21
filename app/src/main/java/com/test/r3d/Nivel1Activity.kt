@@ -2,6 +2,8 @@ package com.test.r3d
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class Nivel1Activity : AppCompatActivity() {
 
@@ -11,4 +13,5 @@ class Nivel1Activity : AppCompatActivity() {
 
 
     }
+    val db = Firebase.firestore
 }
