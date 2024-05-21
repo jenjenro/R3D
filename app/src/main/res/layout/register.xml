@@ -49,6 +49,8 @@
         android:layout_height="245dp"
         android:layout_marginTop="150dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout2">
 
@@ -73,9 +75,12 @@
                 android:layout_height="289dp"
                 android:src="@drawable/inicio"
                 app:civ_border_color="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.138" />
 
             <ImageView
                 android:id="@+id/imageView14"
@@ -85,9 +90,11 @@
                 android:layout_marginTop="32dp"
                 android:src="@drawable/nave"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/imageView12"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.831" />
+                app:layout_constraintVertical_bias="0.835" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,9 +120,11 @@
                 android:id="@+id/textView3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:text="Usuario"
                 android:textColor="@color/formColor"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/inputName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -142,6 +151,7 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/input_background"
                 android:drawableLeft="@drawable/ic_form_pass"
                 android:ems="10"
@@ -150,6 +160,7 @@
                 android:inputType="textPassword"
                 android:textColor="@color/formColor"
                 android:textColorHint="@color/formColor"
+                app:layout_constraintBottom_toTopOf="@+id/inputAge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
@@ -168,6 +179,7 @@
                 android:inputType="text"
                 android:textColor="@color/formColor"
                 android:textColorHint="@color/formColor"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/inputPass" />
@@ -194,15 +206,19 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnActividad1"
+                android:id="@+id/btnModulo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/formColor"
                 android:fontFamily="@font/gotham"
                 android:text="Ingresar"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -213,8 +229,9 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnActividad1"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnModulo1" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button

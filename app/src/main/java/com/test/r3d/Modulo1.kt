@@ -15,12 +15,18 @@ class Modulo1 : AppCompatActivity() {
 
         val btnNivel1 = findViewById<Button>(R.id.btnNivel1)
         val btnNivel2 = findViewById<Button>(R.id.btnNivel2)
+            //botón de nivel 2 bloqueado
+            btnNivel2.isEnabled = false
 
         btnNivel1.setOnClickListener {
             val intent = Intent(this, Nivel1Activity::class.java)
             startActivity(intent)
         }
 
+        btnNivel2.setOnClickListener {
+            val intent = Intent(this, Nivel2Activity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

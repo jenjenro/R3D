@@ -7,4 +7,141 @@
     android:layout_height="match_parent"
     tools:context=".Nivel3Activity">
 
+    <ImageView
+        android:id="@+id/imageViewp1"
+        android:layout_width="448dp"
+        android:layout_height="122dp"
+        android:adjustViewBounds="false"
+        android:rotation="180"
+        android:scaleType="fitEnd"
+        android:src="@drawable/nube"
+        android:translationX="0dp"
+        android:translationY="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonp1"
+        android:layout_width="226dp"
+        android:layout_height="23dp"
+        android:background="@drawable/botton_background_light_blue"
+        android:fontFamily="@font/gotham"
+        android:text="Conexion Bluetooth"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/buttonas"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:background="@android:drawable/ic_menu_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/textViewl"
+        android:layout_width="285dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="540dp"
+        android:fontFamily="c"
+        android:gravity="center"
+        android:text="¿Cuanto es 2*2+5-2?"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonop1"
+        android:layout_width="181dp"
+        android:layout_height="31dp"
+        android:background="@drawable/botton_background_yellow"
+        android:fontFamily="@font/gotham"
+        android:text="17"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634" />
+
+    <Button
+        android:id="@+id/buttonop2"
+        android:layout_width="181dp"
+        android:layout_height="31dp"
+        android:background="@drawable/botton_background_light_blue"
+        android:fontFamily="@font/gotham"
+        android:text="7"
+        android:textColor="#FFFFFF"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <Button
+        android:id="@+id/buttonop3"
+        android:layout_width="181dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/botton_background_red"
+        android:fontFamily="@font/gotham"
+        android:text="12"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="410dp"
+        android:layout_height="114dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nube"
+        android:translationY="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="413dp"
+        android:layout_height="215dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerInside"
+        android:src="@drawable/ovni"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.401" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,16 +7,6 @@
     android:background="@color/white"
     tools:context=".ConexionActivity">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="51dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:drawable/ic_menu_send"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="508dp"
@@ -24,97 +14,109 @@
         android:layout_weight="5"
         android:rotation="180"
         android:src="@drawable/nube"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="51dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_menu_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="117dp"
         android:layout_height="114dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
         android:src="@drawable/nave"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="251dp"
-        android:layout_height="199dp"
-        android:orientation="horizontal"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="244dp"
+        android:layout_height="198dp"
+        android:layout_weight="1"
+        android:src="@drawable/r3d"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/r3d" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="251dp"
-        android:layout_height="199dp"
-        android:layout_marginBottom="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="244dp"
+        android:layout_height="198dp"
+        android:layout_weight="1"
+        android:src="@drawable/r3d"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBlue">
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/r3d" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756" />
 
     <Button
         android:id="@+id/btnBlue"
         android:layout_width="239dp"
         android:layout_height="29dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/botton_background_light_blue"
         android:fontFamily="@font/gotham"
         android:text="Conexión Bluetooth"
         android:textColor="@color/white"
         android:textSize="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnMenu"
         android:layout_width="239dp"
         android:layout_height="29dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/botton_background_light_blue"
         android:fontFamily="@font/gotham"
         android:text="Empecemos a jugar"
         android:textColor="@color/white"
         android:textSize="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.103" />
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="412dp"
         android:layout_height="115dp"
+        android:layout_marginTop="5dp"
         android:adjustViewBounds="false"
         android:scaleType="fitEnd"
         android:src="@drawable/nube"
         android:translationY="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
