@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Modulo3">
+    android:background="@color/white"
+    tools:context=".Module3Activity">
 
     <ImageView
         android:id="@+id/imageView25"
@@ -74,7 +75,7 @@
         app:srcCompat="@drawable/extra5" />
 
     <Button
-        android:id="@+id/btnNivel5"
+        android:id="@+id/btnLevel5"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
@@ -99,12 +100,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel5"
+        app:layout_constraintTop_toBottomOf="@+id/btnLevel5"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/extra6" />
 
     <Button
-        android:id="@+id/btnNivel6"
+        android:id="@+id/btnLevel6"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
@@ -133,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel6" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLevel6" />
 
 
 

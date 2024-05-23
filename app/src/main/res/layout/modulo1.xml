@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Modulo1">
+    tools:context=".Module1Activity">
 
 
     <ImageView
@@ -74,12 +74,13 @@
         app:srcCompat="@drawable/extra1" />
 
     <Button
-        android:id="@+id/btnNivel1"
+        android:id="@+id/btnLevel1"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="80dp"
+        android:background="@drawable/botton_background_light_blue"
         android:text="Nivel1"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,18 +101,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel1"
+        app:layout_constraintTop_toBottomOf="@+id/btnLevel1"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/extra2" />
 
     <Button
-        android:id="@+id/btnNivel2"
+        android:id="@+id/btnLevel2"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="29dp"
+        android:background="@drawable/botton_background_light_blue"
         android:text="Nivel2"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView23"

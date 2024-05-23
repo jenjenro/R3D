@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Modulo2">
+    android:background="@color/white"
+    tools:context=".Module2Activity">
 
     <ImageView
         android:id="@+id/imageView24"
@@ -76,7 +77,7 @@
         app:srcCompat="@drawable/extra3" />
 
     <Button
-        android:id="@+id/btnNivel3"
+        android:id="@+id/btnLevel3"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
@@ -101,12 +102,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel3"
+        app:layout_constraintTop_toBottomOf="@+id/btnLevel3"
         app:layout_constraintVertical_bias="0.035"
         app:srcCompat="@drawable/extra4" />
 
     <Button
-        android:id="@+id/btnNivel4"
+        android:id="@+id/btnLevel4"
         android:layout_width="254dp"
         android:layout_height="49dp"
         android:layout_marginStart="80dp"
@@ -135,7 +136,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNivel4"
+        app:layout_constraintTop_toBottomOf="@+id/btnLevel4"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
