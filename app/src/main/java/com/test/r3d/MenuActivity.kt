@@ -3,6 +3,7 @@ package com.test.r3d
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -10,16 +11,25 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu)
 
-        val btnActividad1 = findViewById<Button>(R.id.btnActividad1)
-        val btnActividad2 = findViewById<Button>(R.id.btnActividad2)
+        val bundle = intent.extras
+        val user = bundle?.getSerializable("user") as User
 
-        btnActividad1.setOnClickListener {
-            val intent = Intent(this, Nivel1Activity::class.java)
+        val btnModule1 = findViewById<Button>(R.id.btnModule1)
+        val btnModule2 = findViewById<Button>(R.id.btnModule2)
+        val btnModule3 = findViewById<Button>(R.id.btnModule3)
+
+        btnModule1.setOnClickListener {
+            val intent = Intent(this, Module1Activity::class.java)
             startActivity(intent)
         }
 
-        btnActividad2.setOnClickListener {
-            val intent = Intent(this, Nivel2Activity::class.java)
+        btnModule2.setOnClickListener {
+            val intent = Intent(this, Module2Activity::class.java)
+            startActivity(intent)
+        }
+
+        btnModule3.setOnClickListener {
+            val intent = Intent(this, Module3Activity::class.java)
             startActivity(intent)
         }
     }

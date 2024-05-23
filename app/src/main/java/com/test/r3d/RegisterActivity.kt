@@ -4,17 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.text.NumberFormat
 
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register)
-        val btnPrueba = findViewById<Button>(R.id.btnActividad1)
+        val btnPrueba = findViewById<Button>(R.id.btnAcces)
         btnPrueba.setOnClickListener {
             ingresarDatos()
         }
@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
         val pass: EditText? = findViewById<EditText>(R.id.inputPass)
         val age : EditText? = findViewById<EditText>(R.id.inputAge)
 
-        if (name?.text.toString().isEmpty() || pass?.text.toString().isEmpty() || age?.text.toString().isEmpty()){
+        if (name?.text.toString().isEmpty() || pass?.text.toString().isEmpty() || age?.text.toString().isEmpty() || age?.text.toString().toInt() < 0) {
             println("Faltan datos")
         }
         else {
@@ -36,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
                 "age" to age?.text.toString(),
                 "password" to pass?.text.toString()
             )
-            val usuario = Usuario(name?.text.toString(),age?.text.toString().toInt(),pass?.text.toString())
+            val usuario = User(name?.text.toString(),age?.text.toString().toInt(),pass?.text.toString())
             db.collection("users")
                 .add(user)
                 .addOnSuccessListener { documentReference ->
@@ -48,7 +48,7 @@ class RegisterActivity : AppCompatActivity() {
             nextScreen(usuario)
         }
     }
-    fun nextScreen(user: Usuario){
+    fun nextScreen(user: User){
         val intent = Intent(this, ConexionActivity::class.java)
 
         val bundle = Bundle()
