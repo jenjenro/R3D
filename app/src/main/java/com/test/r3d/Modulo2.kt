@@ -14,8 +14,8 @@ class Modulo2 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.modulo2)
 
-        val btnNivel3 = findViewById<Button>(R.id.btnNivel3)
-        val btnNivel4 = findViewById<Button>(R.id.btnNivel4)
+        val btnNivel3 = findViewById<Button>(R.id.btnLevel3)
+        val btnNivel4 = findViewById<Button>(R.id.btnLevel4)
         //botón de nivel 2 bloqueado
         btnNivel3.isEnabled = false
         btnNivel4.isEnabled = false
