@@ -1,26 +1,29 @@
 package com.test.r3d
 
-import android.view.Window
+
 import android.content.Intent
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.Window
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.os.Bundle
 import android.widget.Toast
+
+
 
 class ConexionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.conexion)
-
-        val btnSMessage : Button = findViewById(R.id.btnBlue)//.boton equivocado
+/*
+        val btnSMessage : Button = findViewById(R.id.btnBlue)//.boton>equivocado
         btnSMessage.setOnClickListener {
             val message : String? = "No te rindas!"
             showCustomDialogBox(message)
         }
-
+*/
 
 
         val btnBluethooth = findViewById<Button>(R.id.btnBlue)
@@ -42,7 +45,7 @@ class ConexionActivity : AppCompatActivity() {
 
     }
 
-    private fun showCustomDialogBox(message: String?) {
+   /* private fun showCustomDialogBox(message: String?) {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
@@ -58,5 +61,9 @@ class ConexionActivity : AppCompatActivity() {
         }
         dialog.show()
 
-    }
+    }*/
+
+
+
+
 }

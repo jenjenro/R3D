@@ -1,16 +1,11 @@
 package com.test.r3d
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.app.Dialog
 import android.util.ArrayMap
-import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.window.Dialog
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.flow.Flow
@@ -19,6 +14,12 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
 import java.util.ArrayList
 import kotlin.math.absoluteValue
+import androidx.compose.ui.window.Dialog
+import android.view.Window
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.app.Dialog
+
 
 
 class Nivel1Activity : AppCompatActivity() {
