@@ -18,11 +18,10 @@ import kotlin.math.absoluteValue
 
 class Nivel1Activity : AppCompatActivity() {
     private var index:Int=0
-    private var index2:Int=0
+    private var index2:Int= 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nivel1)
-        var question :Question = Question("module5")
 
         val textStatement  = findViewById<TextView>(R.id.textStatement)
         val btn = findViewById<Button>(R.id.button19)
@@ -30,8 +29,8 @@ class Nivel1Activity : AppCompatActivity() {
         val preguntas: ArrayList<ArrayList<String>> = ArrayList()
         val enunciado: ArrayList<String> = ArrayList()
         for ( i in 1..5) {
-            val questions = question.createQuestion(i)
-            val statements = question.createStatements(i)
+            val questions = createQuestion(i)
+            val statements = createStatements(i)
             statements.forEach { statement ->
                 enunciado.add(statement.value as String)
             }
@@ -39,21 +38,59 @@ class Nivel1Activity : AppCompatActivity() {
                 preguntas.add(question.value as ArrayList<String>)
             }
         }
-        textStatement.text = preguntas[index][0]
+        textStatement.text = enunciado[index2]
+        textStatementQuestion1.text = preguntas[index][index]
         btn.setOnClickListener {
-            index2++;
-            index++;
             if(index<preguntas.size) {
-                textStatement.text = preguntas[index][0]
+                textStatementQuestion1.text = preguntas[index][0]
 
-            } else if (index>=preguntas.size) {
+            } else if (index>preguntas.size) {
                 val intent = Intent(this, Module1Activity::class.java)
                 startActivity(intent)
             }
+            if(index2<enunciado.size) {
+                textStatement.text = enunciado[index2]
 
+            }
+            if (index2>=enunciado.size) {
+                val intent = Intent(this, Module1Activity::class.java)
+                startActivity(intent)
+            }
+            index2++;
+            index++;
 
         }
 
 
+    }
+
+    fun getQuestionsFlow(numberQuestion: String): Flow<Map<String, Any?>> = flow {
+        val db = Firebase.firestore
+        val snapshots = db.collection("module1").document("question${numberQuestion}").get().await()
+        emit(snapshots.data!!)
+    }
+
+    fun createQuestion(numQuestion: Int): ArrayMap<String, Any?> {
+        val questions = ArrayMap<String, Any?>()
+        runBlocking {
+            getQuestionsFlow(numQuestion.toString()).collect{ question ->
+                val numRandom = (1..question.size.minus(1)).random()
+                question.filter { it.key.contains("variable${numRandom}")}.forEach{
+                    questions[it.key] = it.value
+                }
+            }
+        }
+        return questions
+    }
+    fun createStatements(numQuestion: Int): ArrayMap<String, Any?> {
+        var statements = ArrayMap<String, Any?>()
+        runBlocking {
+            getQuestionsFlow(numQuestion.toString()).collect { question ->
+                question.filter { it.key == "pregunta" }.forEach {
+                    statements[it.key] = it.value
+                }
+            }
+        }
+        return statements
     }
 }
