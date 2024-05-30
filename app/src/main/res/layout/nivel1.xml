@@ -84,7 +84,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/buttonOption3"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:background="@drawable/botton_background_yellow"
@@ -96,7 +96,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/buttonOption1"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:layout_marginBottom="32dp"
@@ -105,12 +105,12 @@
         android:text="7"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button22"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOption2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/buttonOption2"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:layout_marginBottom="32dp"
@@ -118,7 +118,7 @@
         android:fontFamily="@font/gotham"
         android:text="12"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/button19"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOption3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
