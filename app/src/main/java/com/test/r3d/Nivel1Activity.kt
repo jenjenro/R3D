@@ -14,12 +14,6 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
 import java.util.ArrayList
 import kotlin.math.absoluteValue
-import androidx.compose.ui.window.Dialog
-import android.view.Window
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.app.Dialog
-
 
 
 class Nivel1Activity : AppCompatActivity() {
@@ -28,8 +22,6 @@ class Nivel1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nivel1)
-
-
 
         val textStatement  = findViewById<TextView>(R.id.textStatement)
         val textStatementQuestion1 = findViewById<TextView>(R.id.textStatementQuestion1)
@@ -71,10 +63,6 @@ class Nivel1Activity : AppCompatActivity() {
         }
 
 
-
-    }
-
-
     }
 
     fun getQuestionsFlow(numberQuestion: String): Flow<Map<String, Any?>> = flow {
@@ -106,3 +94,4 @@ class Nivel1Activity : AppCompatActivity() {
         }
         return statements
     }
+}

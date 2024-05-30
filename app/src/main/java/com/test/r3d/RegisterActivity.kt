@@ -37,7 +37,7 @@ class RegisterActivity : AppCompatActivity() {
                 "password" to pass?.text.toString()
             )
             val usuario = User(name?.text.toString(),age?.text.toString().toInt(),pass?.text.toString())
-            db.collection("users")
+            db.collection("usersPruebas")
                 .add(user)
                 .addOnSuccessListener { documentReference ->
                     println("DocumentSnapshot added with ID: ${documentReference.id}")
