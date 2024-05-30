@@ -38,10 +38,5 @@ class Question (val module: String) {
         }
         return statements
     }
-    fun corectQuestion(){
 
-    }
-    fun incorrectQuestion(){
-
-    }
 }
