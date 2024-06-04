@@ -6,7 +6,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.ArrayList
-import java.util.Random
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+
 
 class Nivel1Activity : AppCompatActivity() {
     private var correct: Int = 0
@@ -20,6 +22,25 @@ class Nivel1Activity : AppCompatActivity() {
         val btnOpcion1 = findViewById<Button>(R.id.buttonOption1)
         val btnOpcion2 = findViewById<Button>(R.id.buttonOption2)
         val btnOpcion3 = findViewById<Button>(R.id.buttonOption3)
+
+        val btnD = findViewById<Button>(R.id.buttonOption1)
+
+        dialog()
+
+        btnD.setOnClickListener{
+            val dialogBinding = layoutInflater.inflate(R.layout.dialog_ok,null)
+
+            val myDialog = android.app.Dialog(this)
+            myDialog.setContentView(dialogBinding)
+
+            myDialog.setCancelable(true)
+            myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            myDialog.show()
+            }
+
+
+
+
 
         for (i in 1..5) {
             val questions = question.createQuestion(i)
@@ -52,6 +73,17 @@ class Nivel1Activity : AppCompatActivity() {
                 correctQuestion(preguntas, index)
             }
         }
+    }
+
+    private fun dialog(){
+        val dialogBinding = layoutInflater.inflate(R.layout.dialog_ok,null)
+
+        val myDialog = android.app.Dialog(this)
+        myDialog.setContentView(dialogBinding)
+
+        myDialog.setCancelable(true)
+        myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        myDialog.show()
     }
 
     fun correctQuestion(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int) {
