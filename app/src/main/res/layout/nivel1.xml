@@ -29,7 +29,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/botton_background_light_blue"
         android:fontFamily="@font/gotham"
-        android:text="Conexion Bluetooth"
+        android:text="@string/text_conexion_bluetooth"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -62,6 +62,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView17" />
 
+    <TextView
+        android:id="@+id/textStatement1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="c"
+        android:gravity="center"
+        android:text="¿Cuanto es 2*2+5-2? "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatement" />
+
     <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="271dp"
@@ -80,11 +95,13 @@
             android:layout_height="280dp"
             android:adjustViewBounds="false"
             android:scaleType="centerInside"
-            android:src="@drawable/ovni" />
+            android:scaleX="3"
+            android:scaleY="3"
+            android:src="@drawable/extra1" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonOption3"
+        android:id="@+id/btnOp3lv1"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:background="@drawable/botton_background_yellow"
@@ -96,7 +113,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonOption1"
+        android:id="@+id/btnOp1lv1"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:layout_marginBottom="32dp"
@@ -105,12 +122,12 @@
         android:text="7"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonOption2"
+        app:layout_constraintBottom_toTopOf="@+id/btnOp2lv1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonOption2"
+        android:id="@+id/btnOp2lv1"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:layout_marginBottom="32dp"
@@ -118,7 +135,7 @@
         android:fontFamily="@font/gotham"
         android:text="12"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/buttonOption3"
+        app:layout_constraintBottom_toTopOf="@+id/btnOp3lv1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

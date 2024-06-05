@@ -3,12 +3,20 @@ package com.test.r3d
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class Module3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.modulo3)
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                val intent = Intent(this@Module3Activity, MenuActivity::class.java)
+                startActivity(intent)
+            }
+        })
 
         val btnNivel5 = findViewById<Button>(R.id.btnLevel5)
         val btnNivel6 = findViewById<Button>(R.id.btnLevel6)

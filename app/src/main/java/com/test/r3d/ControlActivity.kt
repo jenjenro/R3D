@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 class ControlActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.control)
 
 
