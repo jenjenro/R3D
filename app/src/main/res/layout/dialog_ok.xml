@@ -36,7 +36,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:padding="25dp"
+                android:padding="45dp"
                 android:text="¡MUY BIEN!"
                 android:textColor="@color/black"
                 android:textSize="25sp"
@@ -62,14 +62,15 @@
 
                     <Button
                         android:id="@+id/alertDialog"
-                        android:layout_width="200dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Sigamos jugando"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:background="@color/background"/>
                 </LinearLayout>
 
             </RelativeLayout>

@@ -5,7 +5,6 @@ import android.os.Looper
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONException
 import org.json.JSONObject
@@ -25,7 +24,7 @@ abstract class ControlActivity : AppCompatActivity(), View.OnClickListener {
         var status = findViewById<TextView>(R.id.status)
 
         val btnON = findViewById<Button>(R.id.btnON)
-        val btnOFF = findViewById<Button>(R.id.btnOFF)
+        val btnOFF = findViewById<Button>(R.id.btnDevice)
 
         val btnUp = findViewById<Button>(R.id.btnUP)
         val btnDown = findViewById<Button>(R.id.btnDOWN)
@@ -77,7 +76,7 @@ abstract class ControlActivity : AppCompatActivity(), View.OnClickListener {
                     }.start()
                 }
 
-                R.id.btnOFF -> {
+                R.id.btnDevice -> {
                     val handlerOFF = android.os.Handler(Looper.getMainLooper())
                     Thread {
                         try {

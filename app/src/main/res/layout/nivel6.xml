@@ -48,82 +48,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216" />
 
+
     <TextView
-        android:id="@+id/textStatementlvl6"
+        android:id="@+id/txtViewQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:fontFamily="c"
-        android:gravity="center"
-        android:text="¿Cuanto es 2*2+5-2? "
+        android:text="¿Qué figura tiene un perímetro de 24 si cada lado tiene 6?"
         android:textColor="#000000"
-        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewlv6_1" />
 
-
-    <LinearLayout
-        android:id="@+id/linearLayoutlvl6_1"
-        android:layout_width="271dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="70dp"
-        android:orientation="vertical"
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="241dp"
+        android:layout_height="281dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textStatementlvl6">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406"
+        app:srcCompat="@drawable/ship" />
 
-        <ImageView
-            android:id="@+id/imageViewlvl6_2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="false"
-            android:scaleType="centerInside"
-            android:scaleX="3"
-            android:scaleY="3"
-            android:src="@drawable/extra6"/>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="7dp"
+        android:text="Acerque la figura correcta a R3D"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageView36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
 
-    <Button
-        android:id="@+id/btnOp3lv6"
-        android:layout_width="181dp"
-        android:layout_height="31dp"
-        android:background="@drawable/botton_background_yellow"
-        android:fontFamily="@font/gotham"
-        android:text="17"
-        android:textColor="#FFFFFF"
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="108dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="95dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView19"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnOp1lv6"
-        android:layout_width="181dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/botton_background_light_blue"
-        android:fontFamily="@font/gotham"
-        android:text="7"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnOp2lv6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnOp2lv6"
-        android:layout_width="181dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/botton_background_red"
-        android:fontFamily="@font/gotham"
-        android:text="12"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnOp3lv6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView35"
+        app:srcCompat="@drawable/wifi_signal" />
 
     <ImageView
         android:id="@+id/imageView19"
