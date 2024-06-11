@@ -21,8 +21,8 @@ abstract class ControlActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.control)
 
-        var status = findViewById<TextView>(R.id.status)
 
+        /*
         val btnON = findViewById<Button>(R.id.btnON)
         val btnOFF = findViewById<Button>(R.id.btnDevice)
 
@@ -104,6 +104,10 @@ abstract class ControlActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
+
+    }
+    */
+
 
     }
 }
