@@ -76,6 +76,7 @@
                         android:id="@+id/alertDialog"
                         android:layout_width="295dp"
                         android:layout_height="match_parent"
+                        android:background="@drawable/botton_background_light_blue"
                         android:gravity="center"
                         android:text="Sigamos jugando"
                         android:textAllCaps="true"
