@@ -2,9 +2,139 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Nivel5Activity">
+
+    <ImageView
+        android:id="@+id/imageViewlv5_1"
+        android:layout_width="448dp"
+        android:layout_height="122dp"
+        android:adjustViewBounds="false"
+        android:rotation="180"
+        android:scaleType="fitEnd"
+        android:src="@drawable/nube"
+        android:translationX="0dp"
+        android:translationY="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonlvl5_1"
+        android:layout_width="226dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/botton_background_light_blue"
+        android:fontFamily="@font/gotham"
+        android:text="@string/text_conexion_bluetooth"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonlvl5_2"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:background="@android:drawable/ic_menu_send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+
+    <TextView
+        android:id="@+id/textStatementlvl5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="c"
+        android:gravity="center"
+        android:text="¿Cuanto es 2*2+5-2? "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewlv5_1" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutlvl5_1"
+        android:layout_width="271dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="70dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatementlvl5">
+
+        <ImageView
+            android:id="@+id/imageViewlvl5_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:scaleType="centerInside"
+            android:scaleX="3"
+            android:scaleY="3"
+            android:src="@drawable/extra5"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnOp3lv5"
+        android:layout_width="181dp"
+        android:layout_height="31dp"
+        android:background="@drawable/botton_background_yellow"
+        android:fontFamily="@font/gotham"
+        android:text="17"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOp1lv5"
+        android:layout_width="181dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/botton_background_light_blue"
+        android:fontFamily="@font/gotham"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnOp2lv5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOp2lv5"
+        android:layout_width="181dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/botton_background_red"
+        android:fontFamily="@font/gotham"
+        android:text="12"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/btnOp3lv5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="410dp"
+        android:layout_height="114dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nube"
+        android:translationY="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

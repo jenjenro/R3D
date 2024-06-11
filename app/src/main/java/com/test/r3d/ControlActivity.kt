@@ -20,7 +20,6 @@ import java.net.URL
 abstract class ControlActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.control)
 
         var status = findViewById<TextView>(R.id.status)

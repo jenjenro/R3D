@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -11,8 +12,21 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu)
 
-        val bundle = intent.extras
-        val user = bundle?.getSerializable("user") as User
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                val intent = Intent(this@MenuActivity, ConexionActivity::class.java)
+
+                startActivity(intent)
+            }
+        })
+
+        /*
+        val bundle2 = intent.extras
+        val user = bundle2?.getSerializable("user") as User
+
+        val prueba = findViewById<TextView>(R.id.textView7)
+        prueba.text = user.name
+        */
 
         val btnModule1 = findViewById<Button>(R.id.btnModule1)
         val btnModule2 = findViewById<Button>(R.id.btnModule2)
