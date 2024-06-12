@@ -4,7 +4,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="45dp">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/icon" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -17,75 +25,56 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/background">
+            android:background="@color/background"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/alert_title"
-                android:layout_width="388dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:padding="5dp"
+                android:padding="45dp"
                 android:text="¡MUY BIEN!"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal"
                 android:visibility="visible" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="2dp">
 
-                <TextView
-                    android:id="@+id/alert_ms"
-                    android:layout_width="401dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="Lo estás haciendo genial" />
-
-                <View
-                    android:id="@+id/alert_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/alert_ms"
-                    android:background="@color/white"
-                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/alert_view"
                     android:layout_gravity="center"
-                    android:background="@color/white"
+                    android:background="@color/background"
                     android:gravity="center">
 
 
                     <Button
                         android:id="@+id/alertDialog"
-                        android:layout_width="295dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/botton_background_light_blue"
                         android:gravity="center"
                         android:text="Sigamos jugando"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:background="@color/background"/>
                 </LinearLayout>
 
             </RelativeLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

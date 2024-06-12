@@ -36,8 +36,8 @@
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="436dp"
-        android:layout_height="190dp"
+        android:layout_width="432dp"
+        android:layout_height="170dp"
         android:layout_marginBottom="4dp"
         android:src="@drawable/nube"
         android:translationY="60dp"
@@ -56,17 +56,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDevice" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="38dp"
         android:layout_height="37dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="278dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="56dp"
         android:src="@drawable/tocar"
-        app:layout_constraintBottom_toTopOf="@+id/button18"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/btnDevice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView32"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
 
     <Button
         android:id="@+id/button20"
@@ -85,10 +89,62 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button7"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/botton_background_light_blue"
+        android:gravity="center"
+        android:text="Temperatura: ***"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnOn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/botton_background_light_blue"
+        android:gravity="center"
+        android:text="Distancia: 20cm"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnDevice"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="200dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/wifi_signal"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnDevice"
         android:layout_width="180dp"
         android:layout_height="32dp"
         android:layout_marginStart="-32dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="132dp"
         android:background="@drawable/botton_background_light_blue"
@@ -99,7 +155,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:layout_constraintVertical_bias="0.008"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -107,21 +166,24 @@
         android:layout_width="180dp"
         android:layout_height="32dp"
         android:layout_marginStart="164dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="-32dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="27dp"
         android:background="@drawable/botton_background_light_blue"
         android:gravity="center"
         android:text="Encender"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
         android:layout_width="0dp"
         android:layout_height="327dp"
         android:layout_marginStart="32dp"
