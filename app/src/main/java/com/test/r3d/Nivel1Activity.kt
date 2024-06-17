@@ -1,12 +1,9 @@
 package com.test.r3d
 
-import android.bluetooth.BluetoothAdapter
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.window.OnBackInvokedDispatcher
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import java.util.ArrayList
@@ -18,24 +15,25 @@ class Nivel1Activity : AppCompatActivity() {
     private var correct: Int = 0
     private var index: Int = 0
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nivel1)
 
+        val bundle = intent?.extras
+        var user = bundle?.getSerializable("user") as User
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
-
             }
         })
 
         val question = Question("module1")
         val statement: ArrayList<String> = ArrayList()
         val preguntas: ArrayList<ArrayList<String>> = ArrayList()
-        val btnOpcion1 = findViewById<Button>(R.id.btnOp1lv1)
-        val btnOpcion2 = findViewById<Button>(R.id.btnOp2lv1)
-        val btnOpcion3 = findViewById<Button>(R.id.btnOp3lv1)
+        val btnOpcion1 = findViewById<Button>(R.id.btnOp1lv1Blue)
+        val btnOpcion2 = findViewById<Button>(R.id.btnOp2lv1Red)
+        val btnOpcion3 = findViewById<Button>(R.id.btnOp3lv1Yellow)
 
         for (i in 1..5) {
             val questions = question.createQuestion(i)
@@ -49,14 +47,16 @@ class Nivel1Activity : AppCompatActivity() {
             }
         }
 
-        correctQuestion(preguntas, index, statement)
+        correctQuestion(preguntas, index, statement, user)
 
         btnOpcion1.setOnClickListener {
             if (btnOpcion1.text == preguntas[index][1]) {
                 correct++
                 index++
-                dialog(preguntas, index, statement, true)
+                dialogOk(preguntas, index, statement, user)
             } else{
+                index++
+                dialogUps(preguntas, index, statement, user)
 
             }
         }
@@ -64,30 +64,35 @@ class Nivel1Activity : AppCompatActivity() {
             if (btnOpcion2.text == preguntas[index][1]) {
                 correct++
                 index++
-                dialog(preguntas, index, statement, true)
+                dialogOk(preguntas, index, statement, user)
+            } else{
+                index++
+                dialogUps(preguntas, index, statement, user)
+
             }
         }
         btnOpcion3.setOnClickListener {
             if (btnOpcion3.text == preguntas[index][1]) {
                 correct++
                 index++
-                dialog(preguntas, index, statement, true)
+                dialogOk(preguntas, index, statement, user)
+            } else{
+                index++
+                dialogUps(preguntas, index, statement, user)
+
             }
         }
     }
 
-    private fun dialog(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int, statements: ArrayList<String> = ArrayList(), option : Boolean) {
-        var opt : Int = 0
-        if (option) {
-            opt = R.layout.dialog_ok
-        }
-        val dialogBinding = layoutInflater.inflate(opt ,null)
+    private fun dialogOk(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int, statements: ArrayList<String> = ArrayList(), user: User) {
+
+        val dialogBinding = layoutInflater.inflate(R.layout.dialog_ok ,null)
 
         val myDialog = android.app.Dialog(this)
         myDialog.setContentView(dialogBinding)
         val btnOk = dialogBinding.findViewById<Button>(R.id.alertDialog)
         btnOk.setOnClickListener {
-            correctQuestion(preguntas, index, statements)
+            correctQuestion(preguntas, index, statements, user)
             myDialog.dismiss()
         }
         myDialog.setCancelable(false)
@@ -96,13 +101,30 @@ class Nivel1Activity : AppCompatActivity() {
         myDialog.show()
     }
 
-    fun correctQuestion(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int, statements: ArrayList<String> = ArrayList()) {
+    private fun dialogUps(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int, statements: ArrayList<String> = ArrayList(), user: User) {
+
+        val dialogBinding = layoutInflater.inflate(R.layout.dialog_ups ,null)
+
+        val myDialog = android.app.Dialog(this)
+        myDialog.setContentView(dialogBinding)
+        val btnOk = dialogBinding.findViewById<Button>(R.id.alertDialog1)
+        btnOk.setOnClickListener {
+            correctQuestion(preguntas, index, statements, user)
+            myDialog.dismiss()
+        }
+        myDialog.setCancelable(false)
+        myDialog.setCanceledOnTouchOutside(false)
+        myDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        myDialog.show()
+    }
+
+    fun correctQuestion(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int, statements: ArrayList<String> = ArrayList(), user: User) {
         val numRandoms: ArrayList<Int> = ArrayList()
         val textStatement = findViewById<TextView>(R.id.textStatement)
         val textStatement1 = findViewById<TextView>(R.id.textStatement1)
-        val btnOpcion1 = findViewById<Button>(R.id.btnOp1lv1)
-        val btnOpcion2 = findViewById<Button>(R.id.btnOp2lv1)
-        val btnOpcion3 = findViewById<Button>(R.id.btnOp3lv1)
+        val btnOpcion1 = findViewById<Button>(R.id.btnOp1lv1Blue)
+        val btnOpcion2 = findViewById<Button>(R.id.btnOp2lv1Red)
+        val btnOpcion3 = findViewById<Button>(R.id.btnOp3lv1Yellow)
 
         if (index < preguntas.size) {
             println(preguntas[index].size.minus(1))
@@ -144,7 +166,10 @@ class Nivel1Activity : AppCompatActivity() {
             }
 
         } else if (index >= preguntas.size) {
+
+            user.puntaje += correct
             val intent = Intent(this, Module1Activity::class.java)
+            intent.putExtra("user", user)
             startActivity(intent)
         }
     }

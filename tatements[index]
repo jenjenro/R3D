@@ -1,0 +1,203 @@
+[33mcommit 9e09d09b187a38a1952d68ff4ed7c81bda7bb548[m[33m ([m[1;36mHEAD -> [m[1;32moscar[m[33m, [m[1;31morigin/oscar[m[33m)[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Wed Jun 5 16:21:33 2024 -0500
+
+    Logica de las preguntas terminadas
+
+[33mcommit 7865f3d479a53a68d8ea2db6f8a8f0181509e6db[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Wed May 29 21:59:12 2024 -0500
+
+    Logica de las preguntas
+
+[33mcommit 514e5a5ab7058d0b4a24b92605f5c917d55cbe89[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Mon May 27 17:47:43 2024 -0500
+
+    Randomizador de enunciados de preguntas
+
+[33mcommit 04f861f1e5b10a1d9db4799906953e58ed3cdbd2[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Wed May 22 23:42:42 2024 -0500
+
+    Conexion coon firebase firestorm
+    Logica de preguntas
+
+[33mcommit 437a125241f6cf961125c0a12b3bad98e304e157[m
+Merge: 2bea67e cc3af90
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Mon May 20 18:40:13 2024 -0500
+
+    Merge remote-tracking branch 'origin/jenny' into oscar
+
+[33mcommit cc3af90ef73760b78609fc178043629f4dba5cab[m[33m ([m[1;31morigin/jenny[m[33m)[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Mon May 20 18:35:23 2024 -0500
+
+    Conexion de los layouts modulo1 a nivel1
+    creación de clases de niveles
+
+[33mcommit 2bea67e569530a115eb81b3c1469eb04bc21e4ba[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Mon May 20 17:47:03 2024 -0500
+
+    prueba
+
+[33mcommit 537ae039e64dfcae6169aca93ff2e5ecd31ee2e8[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Thu May 16 13:15:32 2024 -0500
+
+    Creacion de los layouts modulo1 modulo2 y modulo3
+    arreglo en la carpeta manifest para la clase conexion
+
+[33mcommit de02afe759baaf8fb93bdf275766c67e9c19b8f6[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Wed May 15 12:39:42 2024 -0500
+
+    ninguna modificación
+
+[33mcommit 33d4d5ca69f6448f14ecae67b0e9152937857b36[m
+Merge: 69a9e18 85ed668
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Sat May 11 10:17:06 2024 -0500
+
+    Merge remote-tracking branch 'origin/oscar' into jenny
+    
+    # Conflicts:
+    #       app/src/main/java/com/test/r3d/HomeActivity.kt
+    #       app/src/main/java/com/test/r3d/MenuActivity.kt
+
+[33mcommit 85ed668c0502e1787d7f4135879b9499d6f1fd6d[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Wed May 8 23:22:35 2024 -0500
+
+    Conexion de layouts y registro
+
+[33mcommit 69a9e18aad634ed788794ee414e74d2c3a6458d1[m
+Merge: 11c9043 857e70c
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Wed May 8 15:29:43 2024 -0500
+
+    Merge remote-tracking branch 'origin/oscar' into jenny
+    
+    # Conflicts:
+    #       app/src/main/AndroidManifest.xml
+    #       app/src/main/java/com/test/r3d/RegisterActivity.kt
+    #       app/src/main/res/layout/register.xml
+
+[33mcommit 11c9043d1dec0a18e89ce86ed68205cb7293e97d[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Wed May 8 15:23:16 2024 -0500
+
+    modificación en layout actividad1
+
+[33mcommit 857e70cffbdb0207a11706f1712c248033825bc5[m[33m ([m[1;32mmaster[m[33m)[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Wed May 8 15:01:40 2024 -0500
+
+    Conexion con la firebase
+
+[33mcommit 0585313267fd0cbb00f4a951023a351e918bfaaa[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Tue May 7 23:14:18 2024 -0500
+
+    Creacion del boton para cambiar de layout
+
+[33mcommit c2de759e7f58acf245e111953e6d249bcca13938[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Tue May 7 19:42:24 2024 -0500
+
+    register
+
+[33mcommit 79a2eadf8d16a10b8938ae90802a1d9cd179faaa[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Sat Apr 20 12:46:27 2024 -0500
+
+    modificación en layout actividad1
+
+[33mcommit 346cfecd4ba38dcab96abe278e56d5a57a554f06[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Thu Apr 18 20:47:15 2024 -0500
+
+    creacion de layout actividad1
+
+[33mcommit 7c606c7f885bf3ca691b959fe092e2f837521efe[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Thu Apr 18 18:39:03 2024 -0500
+
+    creacion de layout control
+
+[33mcommit f67fe0f4ad1a2d19907c96d697322badace83808[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Thu Apr 18 11:18:38 2024 -0500
+
+    creacion de layout menu
+
+[33mcommit 77cfcd95ef2bfd93dee6c9aa92e36063c02fa7d7[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Thu Apr 18 09:06:49 2024 -0500
+
+    Registrer
+
+[33mcommit 5e45795a29269e67f70ccd1e42266e1b4f232577[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Wed Apr 17 11:16:28 2024 -0500
+
+    creación del layout conexion -commit
+
+[33mcommit 78ae2f6c784a4f305575accef321c52935fddc81[m
+Merge: 3197b84 93e3193
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Wed Apr 17 09:38:56 2024 -0500
+
+    mejora en interface de home -5 commit?
+     creacion de boton en drawable --> im crying
+
+[33mcommit 3197b84e7c03746ba697b7e54196d1436c8672aa[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Tue Apr 16 23:00:35 2024 -0500
+
+    Creación interface home -commit
+
+[33mcommit 93e3193d91ed272aefaa2e77cf8c7af291b3553f[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Tue Apr 16 21:20:33 2024 -0500
+
+    Se hizo lo que se pudo
+
+[33mcommit c52fa27e91e49f32381551a36d3223245b87b015[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Tue Apr 16 16:16:00 2024 -0500
+
+    Dependencia CircularImage
+
+[33mcommit c2a063d37fe56ba72c8bd319523326c51c154f7e[m
+Merge: 335a83c 5016633
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Tue Apr 16 15:10:44 2024 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 335a83cb5db41ca60a0c3142c00cc5b3b2cf2f87[m
+Author: David Gutierrez <1608davidg@gmail.com>
+Date:   Tue Apr 16 15:06:28 2024 -0500
+
+    Conexion FireBase
+
+[33mcommit 5016633f72bdafc73522b876e1f32ec554513d1a[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Tue Apr 16 15:01:51 2024 -0500
+
+    Creación de layouts y Files- Segundo Commit
+
+[33mcommit 7df1024e903198a8aba4c53c35b6ec0a99e3855c[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Tue Apr 16 14:23:43 2024 -0500
+
+    Primer Commit
+
+[33mcommit 6dda00ebc7a13b067c0eec583732221140c80096[m
+Author: Jenny Rojas <rojasor219@gmail.com>
+Date:   Tue Apr 16 14:14:14 2024 -0500
+
+    Primer Commit

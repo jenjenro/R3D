@@ -23,7 +23,7 @@ class Nivel6Activity : AppCompatActivity() {
 
             }
         })
-
+        /*
         val question = Question("module6")
         val preguntas: ArrayList<ArrayList<String>> = ArrayList()
         val btnOpcion1 = findViewById<Button>(R.id.btnOp1lv6)
@@ -101,5 +101,6 @@ class Nivel6Activity : AppCompatActivity() {
             val intent = Intent(this, Module2Activity::class.java)
             startActivity(intent)
         }
+    */
     }
 }
