@@ -8,33 +8,30 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class ConexionActivity : AppCompatActivity() {
 
-    private val bluetoothViewModel: BluetoothViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.conexion)
 
+
         val btnBluethooth = findViewById<Button>(R.id.btnBlue)
         val btnMenu = findViewById<Button>(R.id.btnMenu)
-
-        lifecycleScope.launch {
-            bluetoothViewModel.data.observe(this@ConexionActivity, Observer { data ->
-                btnMenu.text = data
-                Log.i("BluetoothViewModel>sdds", bluetoothViewModel.data.value.toString())
-            })
-        }
-
-
+        val button5 = findViewById<Button>(R.id.button5)
 
         val bundle = intent.extras
         val user = bundle?.getSerializable("user") as User
 
         btnBluethooth.setOnClickListener {
             val intent = Intent(this, ControlActivity::class.java)
+            intent.putExtra("user", user)
             startActivity(intent)
         }
         btnMenu.setOnClickListener {

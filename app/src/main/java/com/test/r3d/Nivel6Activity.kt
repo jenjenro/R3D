@@ -98,7 +98,7 @@ class Nivel6Activity : AppCompatActivity() {
             btnOpcion3.text = preguntas[index][numRandoms[2]]
 
         } else if (index >= preguntas.size) {
-            val intent = Intent(this, Module2Activity::class.java)
+            val intent = Intent(this, Module3ctivity::class.java)
             startActivity(intent)
         }
     */

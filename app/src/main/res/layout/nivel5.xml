@@ -87,7 +87,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnOp3lv5"
+        android:id="@+id/btnOp3lv5Yellow"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:background="@drawable/botton_background_yellow"
@@ -99,7 +99,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnOp1lv5"
+        android:id="@+id/btnOp1lv5Blue"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:layout_marginBottom="32dp"
@@ -108,12 +108,12 @@
         android:text="7"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnOp2lv5"
+        app:layout_constraintBottom_toTopOf="@+id/btnOp2lv5Red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnOp2lv5"
+        android:id="@+id/btnOp2lv5Red"
         android:layout_width="181dp"
         android:layout_height="31dp"
         android:layout_marginBottom="32dp"
@@ -121,7 +121,7 @@
         android:fontFamily="@font/gotham"
         android:text="12"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnOp3lv5"
+        app:layout_constraintBottom_toTopOf="@+id/btnOp3lv5Yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -9,9 +9,10 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 
 class MenuActivity : AppCompatActivity() {
-    private val bluetoothViewModel: BluetoothViewModel by viewModels()
+    private lateinit var bluetoothViewModel: BluetoothViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu)
@@ -32,11 +33,6 @@ class MenuActivity : AppCompatActivity() {
         val btnModule1 = findViewById<Button>(R.id.btnModule1)
         val btnModule2 = findViewById<Button>(R.id.btnModule2)
         val btnModule3 = findViewById<Button>(R.id.btnModule3)
-
-        Log.i("BluetoothViewModel>", bluetoothViewModel.data.value.toString())
-        bluetoothViewModel.data.observe(this, Observer { data ->
-            btnModule1.text = data
-        })
 
         btnModule1.setOnClickListener {
             val intent = Intent(this, Module1Activity::class.java)

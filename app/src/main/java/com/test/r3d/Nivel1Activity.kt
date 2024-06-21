@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.ArrayList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.util.Log
+import androidx.lifecycle.Observer
 
 
 class Nivel1Activity : AppCompatActivity() {
@@ -27,13 +29,14 @@ class Nivel1Activity : AppCompatActivity() {
             override fun handleOnBackPressed() {
             }
         })
+        GlobalVariable.updateVariable("")
 
         val question = Question("module1")
         val statement: ArrayList<String> = ArrayList()
         val preguntas: ArrayList<ArrayList<String>> = ArrayList()
-        val btnOpcion1 = findViewById<Button>(R.id.btnOp1lv1Blue)
-        val btnOpcion2 = findViewById<Button>(R.id.btnOp2lv1Red)
-        val btnOpcion3 = findViewById<Button>(R.id.btnOp3lv1Yellow)
+        val btnOp1lv1Blue = findViewById<Button>(R.id.btnOp1lv1Blue)
+        val btnOp2lv1Red = findViewById<Button>(R.id.btnOp2lv1Red)
+        val btnOp3lv1Yellow = findViewById<Button>(R.id.btnOp3lv1Yellow)
 
         for (i in 1..5) {
             val questions = question.createQuestion(i)
@@ -49,8 +52,34 @@ class Nivel1Activity : AppCompatActivity() {
 
         correctQuestion(preguntas, index, statement, user)
 
-        btnOpcion1.setOnClickListener {
-            if (btnOpcion1.text == preguntas[index][1]) {
+        GlobalVariable.myVariable.observe(this, Observer { value ->
+            if (value == ""){
+
+            } else{
+                if (btnOp1lv1Blue.text == preguntas[index][1] && value.trim() == "Azul") {
+                    Log.i("Nivel1Activity", value)
+                    correct++
+                    index++
+                    dialogOk(preguntas, index, statement, user)
+                } else if (btnOp2lv1Red.text == preguntas[index][1] && value.trim() == "Rojo") {
+                    Log.i("Nivel1Activity", value)
+                    correct++
+                    index++
+                    dialogOk(preguntas, index, statement, user)
+                } else if (btnOp3lv1Yellow.text == preguntas[index][1] && value.trim() == "Amarillo") {
+                    Log.i("Nivel1Activity", value)
+                    correct++
+                    index++
+                    dialogOk(preguntas, index, statement, user)
+                } else {
+                    index++
+                    dialogUps(preguntas, index, statement, user)
+                }
+            }
+        })
+
+        btnOp1lv1Blue.setOnClickListener {
+            if (btnOp1lv1Blue.text == preguntas[index][1]) {
                 correct++
                 index++
                 dialogOk(preguntas, index, statement, user)
@@ -60,8 +89,9 @@ class Nivel1Activity : AppCompatActivity() {
 
             }
         }
-        btnOpcion2.setOnClickListener {
-            if (btnOpcion2.text == preguntas[index][1]) {
+
+        btnOp2lv1Red.setOnClickListener {
+            if (btnOp2lv1Red.text == preguntas[index][1]) {
                 correct++
                 index++
                 dialogOk(preguntas, index, statement, user)
@@ -71,8 +101,8 @@ class Nivel1Activity : AppCompatActivity() {
 
             }
         }
-        btnOpcion3.setOnClickListener {
-            if (btnOpcion3.text == preguntas[index][1]) {
+        btnOp3lv1Yellow.setOnClickListener {
+            if (btnOp3lv1Yellow.text == preguntas[index][1]) {
                 correct++
                 index++
                 dialogOk(preguntas, index, statement, user)
@@ -82,6 +112,7 @@ class Nivel1Activity : AppCompatActivity() {
 
             }
         }
+
     }
 
     private fun dialogOk(preguntas: ArrayList<ArrayList<String>> = ArrayList(), index: Int, statements: ArrayList<String> = ArrayList(), user: User) {
@@ -167,7 +198,7 @@ class Nivel1Activity : AppCompatActivity() {
 
         } else if (index >= preguntas.size) {
 
-            user.puntaje += correct
+            user.puntajelvl1 = correct
             val intent = Intent(this, Module1Activity::class.java)
             intent.putExtra("user", user)
             startActivity(intent)

@@ -31,11 +31,6 @@ class Module1Activity : AppCompatActivity() {
             }
         })
 
-        var textView7 = findViewById<TextView>(R.id.textView7)
-        Log.i("BluetoothViewModel>", bluetoothViewModel.data.value.toString())
-        bluetoothViewModel.data.observe(this, Observer { data ->
-            textView7.text = data
-        })
 
         val btnNivel1 = findViewById<Button>(R.id.btnLevel1)
         val btnNivel2 = findViewById<Button>(R.id.btnLevel2)

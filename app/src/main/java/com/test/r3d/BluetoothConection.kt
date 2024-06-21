@@ -17,17 +17,15 @@ class BluetoothConection(private val socket: BluetoothSocket) : Thread() {
             val buffer = ByteArray(1024)
             var bytes: Int
 
-            // Mantén escuchando el InputStream hasta que ocurra una excepción
             while (true) {
                 try {
-                    // Lee del InputStream
                     bytes = inputStream.read(buffer)
                     val readMessage = String(buffer, 0, bytes)
                     Log.d("BluetoothConnection", "Message received: $readMessage")
 
-                    // Ejecuta el callback en el hilo principal
                     withContext(Dispatchers.Main) {
                         onMessageReceived(readMessage)
+
                     }
 
                 } catch (e: IOException) {
